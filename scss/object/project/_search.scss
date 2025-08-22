@@ -1,0 +1,145 @@
+@use "../../foundation/variable" as vars;
+.search__main {
+    padding-top: 6.6rem;
+    padding-bottom: 20.8rem;
+    @include vars.sp {
+        padding-top: 3.6rem;
+        padding-bottom: 20.2rem;
+    }
+}
+
+.search__main-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    h1,p { 
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        span {
+            color: vars.$color-text;
+            font-weight: 700;
+        }
+    }
+}
+
+
+
+
+// テンプレ--------------------------------
+// items
+.search__main-items {
+    margin-top: 4.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    @include vars.sp {
+        gap: 4rem;
+    }
+}
+
+// card
+.search__items-card {
+    display: flex;
+    gap: 5rem;
+   
+    @include vars.transition;
+    @include vars.sp {
+        flex-direction: column;
+        gap: 0;
+    }
+    &:hover {
+        @include vars.hover-opacity;
+    }
+}
+
+.search__card-image {
+    width: 26rem;
+    @include vars.sp {
+        width: 100%;
+    }
+    picture {
+        display: block;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 26/18.4;
+        object-fit: cover;
+        display: block;
+        @include vars.sp {
+            aspect-ratio: 33.5/20;
+        }
+    }
+}
+
+// text
+.search__card-text {
+    flex: 1;
+ 
+
+    
+    @include vars.sp {
+        width: 100%;
+    }
+    h3 {
+        @include vars.text-style(2rem, calc(25/20));
+        margin-top: -0.1rem;
+        @include vars.sp {
+            @include vars.text-style(2rem, calc(30/20));
+            margin-top: 3rem;
+        }
+    }
+    time {
+        display: block;
+        @include vars.text-style(1.7rem, calc(30/17));
+        font-weight: 500;
+        margin-top: 0.3rem;
+        @include vars.sp {
+            text-align: right;
+            margin-top: 0.4rem;
+        }
+    }
+    p {
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        margin-top: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include vars.sp {
+            margin-top: 0.9rem;
+            @include vars.text-style(1.6rem, calc(30/16));
+            -webkit-line-clamp: 5; 
+
+        }
+    }
+
+    span {
+        display: inline-block;
+
+        @include vars.sp {
+            display: none;
+        }
+    }
+}
+
+.search__negative-margin {
+    margin-bottom: -0.5rem;
+    @include vars.sp {
+        margin-bottom: 0;
+    }
+}
+
+
+
+.search__main-no-result {
+    text-align: center;
+    p {
+        @include vars.text-style(2rem, calc(30/20));
+        font-weight: 500;
+    }
+}

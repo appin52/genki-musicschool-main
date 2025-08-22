@@ -1,0 +1,105 @@
+@use "../../foundation/variable" as vars;
+.top__blog {
+    padding: 5rem 0 20.4rem;
+    @include vars.sp {
+        padding: 4.3rem 0 18.9rem;
+    }
+}
+
+.blog__title {
+    @include vars.text-style(3rem, 1);
+    @include vars.sp {
+        @include vars.text-style(2.5rem, calc(40/25));
+    }
+}
+
+.blog__box {
+    display: flex;
+    margin-top: 4.7rem;
+    gap: 5rem;
+    @include vars.sp {
+        flex-direction: column;
+        gap: 4.2rem;
+        margin-top: 4rem;
+    }
+}
+
+
+.blog__box-item {
+    display: block;
+    width: 26rem;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    @include vars.transition;
+    
+    &:hover {
+        @include vars.hover-opacity;
+    }
+    
+    @include vars.sp {
+        width: 100%;
+    }
+}
+
+.blog__card-image {
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 26 / 20;
+        width: 100%;
+        object-fit: cover;
+        @include vars.sp {
+            aspect-ratio: 33.5 / 20;
+        }
+    }
+}
+
+.blog__card-text {
+    h3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include vars.text-style(2rem, calc(25/20));
+        margin-top: 2rem;
+        @include vars.sp {
+            @include vars.text-style(2rem, calc(30/20));
+            margin-top: 3rem;
+        }
+    }
+    time {
+        @include vars.text-style(1.7rem, calc(30/17));
+        display: block;
+        font-weight: 500;
+        margin-top: 1.2rem;
+        text-align: right;
+        @include vars.sp {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+
+
+.blog__linklist {
+    margin-top: 3.7rem;
+    text-align: right;
+    @include vars.sp {
+        text-align: center;
+    }
+
+    a {
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-thickness: 0.5px;
+        text-underline-offset: 0.3rem;
+        display: inline-block;
+        
+        &:hover {
+            @include vars.hover-opacity;
+        }
+    }
+}

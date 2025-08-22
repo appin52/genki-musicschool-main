@@ -1,0 +1,521 @@
+@use "../../foundation/variable" as vars;
+// 枠組み
+
+.blog-details-content {
+    padding-top: 7rem;
+    padding-bottom: 19rem;
+
+    @include vars.sp {
+        padding-top: 5rem;
+        padding-bottom: 19.5rem;
+    }
+
+    .inner {
+        display: flex;
+        gap: 3rem;
+        
+        @include vars.sp {
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+}
+
+.blog-details-main {
+    width: 60rem;
+    @include vars.sp {
+        width: 100%;
+    }
+}
+
+.blog-details-side {
+    flex: 1;
+    @include vars.sp {
+        width: 100%;
+    }
+}
+
+// ----------------------------------------------------------------
+// main
+// ----------------------------------------------------------------
+
+// カード --------------------------------
+.blog-details-main__card-image {
+    width: 100%;
+    
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 60 / 35;
+        @include vars.sp {
+            aspect-ratio: 33.5 / 20;
+        }
+    }
+}
+
+.blog-details-main__card-text{
+    h1 {
+        @include vars.text-style(2.5rem, calc(40/25));
+        margin-top: 5.4rem;
+        line-height: 1;
+        @include vars.sp {
+            @include vars.text-style(2rem, calc(30/20));
+            margin-top: 3rem;
+            margin-right: -0.3rem;
+        }
+    }
+    time {
+        display: block;
+        @include vars.text-style(1.7rem, calc(30/17));
+        font-weight: 500;
+        margin-top: 1.3rem;
+        @include vars.sp {
+            margin-top: 0.6rem;
+        }   
+    }
+
+    span {
+        display: inline-block;
+    }
+}
+
+
+
+// sns
+.blog-details-main__sns {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 2rem;
+    margin-bottom: 4.5rem;
+    @include vars.sp {
+        gap: 0.2rem;
+    }
+
+    a {
+        @include vars.transition;
+        &:hover {
+            @include vars.hover-opacity;
+        }
+    }
+}
+
+
+.blog__sns-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog__sns__icon-text {
+    @include vars.text-style(1rem, calc(33/10));
+    color: vars.$color-white;
+}
+
+.blog__sns-box-facebook {
+    background-color: vars.$color-facebook;
+    padding: 0.4rem 1.6rem;
+
+    p {
+        padding-left: 1.4rem;
+    }
+}
+
+.blog__sns-box-twitter {
+    background-color: vars.$color-twitter;
+    padding: 0.4rem 1.3rem 0.4rem 1.4rem;
+
+    p {
+        padding-left: 0.7rem;
+    }
+}
+
+.blog__sns-box-hatena {
+    background-color: vars.$color-hatena;
+    padding: 0.4rem 1.3rem 0.4rem 1.3rem;
+
+    p {
+        padding-left: 1.2rem;
+    }
+}
+
+.blog__sns-box-line {
+    background-color: vars.$color-line;
+    padding: 0.4rem 1.7rem 0.4rem 1.4rem;
+
+    p {
+        padding-left: 0.7rem;
+    }
+}
+
+.blog__sns-box-pocket {
+    background-color: vars.$color-pocket;
+    padding: 0.4rem 1.3rem 0.4rem 1.3rem;
+
+    p {
+        padding-left: 0.9rem;
+    }
+}
+
+
+.blog__sns-box-facebook,
+.blog__sns-box-twitter,
+.blog__sns-box-hatena,
+.blog__sns-box-line,
+.blog__sns-box-pocket {
+    @include vars.sp {
+        padding: 0;
+        width: 6.5rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+// article-before&after--------------------------------
+.blog-before-after {
+    margin-top: 5.7rem;
+    gap: 8rem;
+    @include vars.sp {
+        margin-top: 4.8rem;
+        gap: 2.2rem;
+
+    }
+}
+
+// article--------------------------------
+.blog-details-main__article {
+    margin-top: 9.5rem;
+
+    @include vars.sp {
+        margin-top: 6.1rem;
+
+    }
+}
+
+.blog__main__article-title {
+    @include vars.text-style(1.8rem, calc(33/18));
+    padding: 0.9rem 0 0.8rem 3rem;
+    @include vars.sp {
+        text-align: center;
+        padding: 1rem 0;
+    }
+}
+
+.blog__main__article-items {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include vars.sp {
+        margin-top: 1.9rem;
+        gap: 2rem;
+    }
+}
+
+// card
+.blog__main__article-items-card {
+    display: flex;
+    gap: 3rem;
+    color: inherit;
+    text-decoration: none;
+    @include vars.transition;
+    @include vars.sp {
+        gap: 2rem;
+    }
+    
+    &:hover {
+        @include vars.hover-opacity;
+    }
+}
+
+.blog-article__card-image {
+    width: 20rem;
+    @include vars.sp {
+        width: 16rem;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 20 / 14;
+        object-fit: cover;
+        @include vars.sp {
+            aspect-ratio: 16 / 11;
+        }
+    }
+}
+
+.blog-article__card-text {
+    flex: 1;
+    h3 {
+        @include vars.text-style(2rem, calc(25/20));
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include vars.sp {
+            @include vars.text-style(1.7rem, calc(28/17));
+            margin-top: 0.8rem;
+        }
+
+        span {
+            display: inline;
+            @include vars.sp {
+                display: none;
+            }
+        }
+    }
+
+    time {
+        display: block;
+        @include vars.text-style(1.7rem, calc(30/17));
+        font-weight: 500;
+        margin-top: 1.3rem;
+        padding-left: 0.5rem;
+        @include vars.sp {
+            margin-top: 0.3rem;
+            padding-left: 0;
+        }
+    }
+
+    
+}
+
+.blog-article__card-btn {
+    width: 8rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    @include vars.text-style(1.5rem, calc(25/15));
+    padding-top: 0.2rem;
+
+}
+
+
+// ----------------------------------------------------------------
+// side
+// ----------------------------------------------------------------
+
+// 無料メールマガジン 
+.blog-details-side__free__magazine-box {
+    border: 0.5px solid vars.$color-text;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include vars.sp {
+        height: 26.8rem;
+        padding-inline: 2rem;
+
+    }
+
+    p {
+        @include vars.text-style(1.8rem, calc(33/18));
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        pointer-events: none;
+        @include vars.transition;
+    }
+}
+
+// バナーリンク（クリック可能領域）
+.blog-details-side__banner-link {
+    width: 22rem;
+    height: 17rem;
+    background-color: vars.$color-band;
+    @include vars.transition;
+
+    @include vars.sp {
+        width: 100%;
+        height: 22.8rem;
+    }
+
+    &:hover {
+        @include vars.hover-opacity;
+    }
+}
+
+
+// ブログ内を検索
+.blog-details-side__search {
+    margin-top: 3rem;
+}
+
+.blog-details-side__search-box {
+    border: 0.5px solid vars.$color-text;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1.5rem;
+
+
+
+    @include vars.sp {
+        height:9.3rem;
+        padding-inline: 2rem;
+
+
+    }
+}
+
+.blog-details-side__search__box-input {
+    height: 4rem;
+    background-color: vars.$color-band;
+    border: none;
+    outline: none;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: vars.$color-text;
+    flex: 1;
+
+    @include vars.sp {
+        height: 5.4rem;
+        padding: 0 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    &:focus {
+        background-color: rgba(vars.$color-band, 0.5);
+    }
+}
+
+.blog-details-side__search__box-image {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: vars.$color-text;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @include vars.sp {
+        width: 5.4rem;
+        height: 5.4rem;
+    }
+
+    &:hover {
+        background-color: rgba(vars.$color-text, 0.6);
+    }
+
+    img {
+        width: auto;
+        @include vars.sp {
+            width: 2.6rem;
+        }
+    }
+}
+
+// おすすめの記事
+.blog-details-side__recommend {
+    margin-top: 3rem;
+    
+}
+
+.blog-details-side__recommend-box {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @include vars.sp {
+        margin-top: 2.2rem;
+        gap: 2rem;
+    }
+}
+
+.blog-details-side__recommend__box-item {
+    display: flex;
+    gap: 1.5rem;
+    @include vars.transition;
+
+    &:hover {
+        @include vars.hover-opacity;
+    }
+
+    @include vars.sp {
+        gap: 2rem;
+    }
+}
+
+.blog-details-side__recommend__box__item-image {
+    width: 9.5rem;
+    background-color: vars.$color-band;
+    @include vars.sp {
+        width: 16rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 9.5 / 7.5;
+
+        @include vars.sp {
+            aspect-ratio: 16 / 11;
+        }
+    }
+}
+
+.blog-details-side__recommend__box__item-text {
+    flex: 1;
+    @include vars.sp {
+        width: 100%;
+    }
+    p {
+        @include vars.text-style(1.7rem, calc(28/17));
+        font-weight: 500;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include vars.sp {
+            margin-top: 0.8rem;
+        }
+    }
+}
+
+
+// カテゴリー
+.blog-details-side__category {
+    margin-top: 3rem;
+}
+
+
+.blog-details-side__category__box-item {
+    @include vars.transition;
+    @include vars.text-style(1.7rem, calc(28/17));
+    font-weight: 500;
+    border-bottom: 0.5px solid vars.$color-text;
+
+    a {
+        padding-top: 0.95rem;
+        padding-bottom: 0.95rem;
+    }
+
+    a:hover {
+          @include vars.hover-opacity;
+    }
+} 
+
+
+
+
+
+

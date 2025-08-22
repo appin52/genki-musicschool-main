@@ -1,0 +1,115 @@
+@use "../../foundation/variable" as vars;
+.top__voice {
+    padding: 4.4rem 0 8rem;
+    @include vars.sp {
+        padding: 4.5rem 0 5rem;
+    }
+}
+
+.voice-inner {
+    max-width: 98rem;
+    padding-inline: 5rem;
+    margin: 0 auto;
+
+    @include vars.pc-768-1000 {
+        padding-inline: 7rem;
+    }
+
+    @include vars.sp {
+        padding-inline: 2rem;
+    }
+}
+
+.voice__title {
+    @include vars.text-style(3rem, calc(50/30));
+    @include vars.sp {
+        @include vars.text-style(2.5rem, calc(40/25));
+    }
+}
+
+.voice__box {
+    margin-top: 3.6rem;
+    @include vars.sp {
+        margin-top: 4rem;
+    }
+}
+
+.voice__card {
+    width: 27rem;
+    display: block;
+    color: inherit;
+    @include vars.transition;
+
+    @include vars.sp {
+        width: 100%;
+    }
+    
+    &:hover {
+        .voice__card-image {
+            overflow: hidden;
+            img {
+                @include vars.hover-bigger;
+                @include vars.transition;
+
+
+            }
+        }
+        .voice__card-text {
+            h3,p {
+                @include vars.hover-opacity;
+                @include vars.transition;
+            }
+        }
+    }
+}
+
+.voice__card-image {
+    overflow: hidden;
+    width: 27rem;
+    @include vars.sp {
+        width: 100%;
+    }
+
+    img {
+        @include vars.transition;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 27 / 19;
+        @include vars.sp {
+        aspect-ratio: 33.5 / 20;
+        }
+    }
+}
+
+.voice__card-text {
+    h3 {
+        @include vars.text-style(2.2rem, calc(33/22));
+        @include vars.transition;
+        margin-top: 1.7rem;
+        display: -webkit-box;
+
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1; 
+        
+        @include vars.sp {
+            margin-top: 2.7rem;
+        }
+    }
+
+    p {
+        @include vars.transition;
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-right: 0;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4; 
+    }
+}

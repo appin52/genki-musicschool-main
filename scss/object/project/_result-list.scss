@@ -1,0 +1,85 @@
+@use "../../foundation/variable" as vars;
+
+.result-list__main {
+    padding-top: 7.5rem;
+    padding-bottom: 21rem;    
+}
+
+
+.result-list__main-title {
+    @include vars.text-style(2.5rem, 1);
+}
+
+
+
+// テンプレート--------------------------------
+// items
+.result-list__main-items {
+    margin-top: 4.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10.6rem; // 横方向
+    row-gap: 7rem;    // 縦方向 修正致しました
+    @include vars.sp {
+        gap: 3.9rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+// card
+.result-list__items-card {
+    color: inherit;
+    text-decoration: none;
+    @include vars.transition;
+    
+    &:hover {
+        @include vars.hover-opacity;
+    }
+}
+
+.result-list__card-image {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 38.7 / 27.3;
+        object-fit: cover;  
+        @include vars.sp {
+            aspect-ratio: 33.5 / 20;
+        }
+    }
+}
+
+// text
+.result-list__card-text {
+    h3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include vars.text-style(2rem, calc(25/20));
+        margin-top: 2rem;
+        @include vars.sp {
+            @include vars.text-style(2rem, calc(30/20));
+            margin-top: 3.1rem;
+        }
+    }
+    time {
+        display: block;
+        @include vars.text-style(1.8rem, calc(32/18));
+        font-weight: 500;
+        margin-top: 1rem;
+        text-align: right;
+
+        @include vars.sp {
+            margin-top: 0.4rem;
+        }
+    }
+}
+
+
+
+

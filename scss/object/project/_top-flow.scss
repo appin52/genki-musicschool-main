@@ -1,0 +1,134 @@
+@use "../../foundation/variable" as vars;
+
+
+.top__flow {
+    padding: 3.4rem 0 8.3rem;
+    @include vars.sp {
+        padding: 4.5rem 0 5rem;
+    }
+}
+
+.flow__title {
+    @include vars.text-style(3rem, calc(50/30));
+    @include vars.sp {
+        @include vars.text-style(2.5rem, calc(40/25));
+    }
+}
+
+.flow__box-wrapper {
+    display: flex;
+    position: relative;
+    padding-left: 8rem;
+    gap:4.3rem;
+    @include vars.sp {
+        gap: 1.3rem;
+        padding-left: 3.5rem;
+    }
+}
+
+.flow__box-image {
+
+    span {
+        position: absolute;
+        top: 6rem;
+        left: 6.1rem;
+        height: 90%;
+        background-color: vars.$color-main;
+        width: 0.3rem;
+
+
+
+        @include vars.sp {
+            top: 5rem;
+            left: 1.6rem;
+            height: 91%;
+
+        }
+        
+        
+    
+        
+        &::before {
+            content: '';
+            position: absolute;
+            right: -0.75rem;
+            bottom: -0.7rem;
+            transform: rotate(45deg);
+            width: 0.3rem;
+            height: 2.5rem;
+            background-color: vars.$color-main;
+        }
+    
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0.75rem;
+            bottom: -0.7rem;
+            transform: rotate(-45deg);
+            width: 0.3rem;
+            height: 2.5rem;
+            background-color: vars.$color-main;
+        }
+    }
+}
+
+.flow__box {
+    display: flex;
+    flex-direction: column;
+    gap: 5.8rem;
+    margin-top: 5.3rem;
+    @include vars.sp {
+        margin-top: 3.8rem;
+        gap: 3.6rem;
+    }
+}
+
+.flow__card {
+    display: flex;
+    align-items: start;
+    max-width: 76rem;
+    position: relative;
+    @include vars.sp {
+        flex-direction: column;
+        width: vw(287, 375);
+        gap: 0.9rem;
+    }
+
+    h3 {
+        @include vars.text-style(2.2rem, calc(33/22));
+    }
+
+    p {
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        @include vars.sp {
+            @include vars.text-style(1.6rem, calc(30/16));
+        }
+    }
+}
+
+.flow-radius-red {
+    &::before {
+        position: absolute;
+        top: 0.6rem;
+        left: -7rem;
+        @include vars.sp {
+            left: -4rem;
+        }
+    }
+}
+
+.flow__card-title {
+    width: 19rem;
+    @include vars.sp {
+        width: 100%;
+    }
+}
+
+.flow__card-text {
+    flex: 1;
+    @include vars.sp {
+        width: 100%;
+    }
+}
+

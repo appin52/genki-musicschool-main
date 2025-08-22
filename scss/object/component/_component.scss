@@ -1,0 +1,176 @@
+@use "../../foundation/variable" as vars;
+// お問い合わせボタンやホームへ戻るボタン
+// ブログや卒業実績で表示される「ギター」「集客方法」「ポップス」などのタグ
+// 下層ページの見出し部分やパンくずリスト
+// 一覧ページのページネーション
+// サイト内で2回以上使うパーツが該当
+
+.c-btn {
+    border: 0.1rem solid vars.$color-main;
+    color: vars.$color-white;
+    background-color: vars.$color-main;
+    @include vars.transition;
+}
+
+.c-bg-red {
+    background-color: vars.$color-main;
+    color: vars.$color-white;
+}
+
+.c-bg-black {
+    background-color: vars.$color-black;
+    color: vars.$color-white;
+}
+
+.c-font-red {
+    color: vars.$color-main;
+}
+
+.c-radius-red {
+    &::before {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        background-color: vars.$color-main;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+.c-text-center {
+    text-align: center;
+}
+
+// ビュー
+.c-view {
+    position: relative;
+
+    &-image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: rgba(80, 80, 80, 0.5);
+
+        &::before {  
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(80, 80, 80, 0.5);  // オーバーレイ色
+            mix-blend-mode: multiply;  // 乗算モード
+            z-index: 1;
+        }
+
+        img {
+            object-fit: cover;
+            // @include vars.sp {
+            //     aspect-ratio: 37.5 / 30;
+            // }
+        }
+    }
+
+    &-text {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        @include vars.text-style(2.5rem, calc(60/25));
+        color: vars.$color-white;
+    }
+}
+
+
+
+// カテゴリー
+.c-category-parent {
+    position: relative;
+}
+.c-category {
+    border: 0.1rem solid vars.$color-main;
+    color: vars.$color-white;
+    background-color: vars.$color-main;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include vars.text-style(1.5rem, calc(25/15));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    padding-inline: 0.5rem;
+}
+
+
+.c-category__top-blog {
+    min-width: 8rem;
+    @include vars.sp {
+        width: 9rem;
+    }
+}
+
+.c-category__blog-list {
+    min-width: 8rem;
+    @include vars.sp {
+        min-width: 9rem;
+    }
+}
+
+.c-category__blog-details{
+    min-width: 8rem;
+}
+
+.c-category__blog-details-main {
+    min-width: 8rem;
+    @include vars.sp {
+        min-width: 9rem;
+    }
+}
+
+.c-category__search {
+    min-width: 8rem;
+    @include vars.sp {
+        min-width: 9rem;
+    }
+}
+
+.c-category__result-list {
+    min-width: 10rem;
+    @include vars.sp {
+        min-width: 9rem;
+    }
+}
+
+.c-category__result-details-main {
+    min-width: 10rem;
+}
+
+.c-category__result-details{
+    min-width: 10rem;
+    @include vars.sp {
+        min-width: 8rem;
+    }
+}
+
+
+
+
+.c-blog-side__title {
+    width: 25rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @include vars.sp {
+        width: 100%;
+    }
+
+    h2 {
+        @include vars.text-style(1.8rem, calc(33/18));
+    }
+}

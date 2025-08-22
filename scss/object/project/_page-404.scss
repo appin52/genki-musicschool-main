@@ -1,0 +1,41 @@
+@use "../../foundation/variable" as vars;
+
+.not-found__main {
+    padding-top: 6.8rem;
+    padding-bottom: 9rem;
+    @include vars.sp {
+        padding-top: 4.3rem;
+        padding-bottom: 4.9rem;
+    }
+
+    p {
+        text-align: center;
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        @include vars.sp {
+            text-align: left;
+            @include vars.text-style(1.6rem, calc(30/16));
+        }
+    }
+}
+
+// 送信ボタン
+.btn-not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto 0; 
+    width: 25rem;
+    height: 5rem;
+    @include vars.text-style(2.5rem, calc(33/25));
+    @include vars.transition;
+    @include vars.sp {
+        margin: 0.9rem auto 0;
+        width: 33.5rem;
+        height: 5rem;
+        @include vars.text-style(2rem, calc(36/20));
+    }
+    &:hover {
+        @include vars.hover-reversecolor;
+    }
+}

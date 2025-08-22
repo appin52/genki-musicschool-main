@@ -1,0 +1,26 @@
+@use "../../foundation/variable" as vars;
+.top__message {
+    padding: 6.8rem 0 6rem;
+    @include vars.sp {
+        padding: 4.7rem 0 4.1rem;
+    }
+}
+
+.message__title {
+    text-align: center;
+    h2 {
+        @include vars.text-style(3rem, calc(50/30));
+        margin-bottom: 3rem;
+        @include vars.sp {
+            @include vars.text-style(2.5rem, calc(40/25));
+            margin-bottom: 1.5rem;
+        }
+    }
+    p {
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        @include vars.sp {
+            @include vars.text-style(1.8rem, calc(30/18));
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@use "../foundation/variable" as vars;
+
+footer {
+    padding: 3.5rem 0 4rem;
+    @include vars.sp {
+        padding: 3.8rem 0 5.5rem;
+    }
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: center;
+    @include vars.text-style(1.7rem, calc(33/17));
+    @include vars.sp {
+        @include vars.text-style(1.6rem, calc(30/16));
+    }
+}
+
+.footer__nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+
+    a {
+        padding: 1rem;
+        @include vars.transition;
+        
+        &:hover {
+            @include vars.hover-opacity;
+        }
+    }
+}
+
+.footer__logo {
+    margin: 0 auto;
+    margin-top: 0.8rem;
+    width: 4.2rem;
+    display: inline-block;
+    padding: 0.5rem;
+    @include vars.transition;
+    @include vars.sp {
+        margin-top: 0.7rem;
+    }
+    &:hover {
+        @include vars.hover-opacity;
+    }
+}
+
+.footer__copyright {
+    margin-top: 1.5rem;
+    margin-bottom: -0.5rem;
+    @include vars.text-style(1.5rem, calc(33/15));
+    font-weight: 500;
+    @include vars.sp {
+        margin-top: 2.0rem;
+        @include vars.text-style(1.5rem, calc(20/15));
+    }
+}
+
+.footer__sns {
+    display: flex;
+    justify-content: center;
+
+
+    @include vars.sp {
+        gap: 2.5rem;
+    }
+    @include vars.sp {
+        margin-top: 1.5rem;
+    }
+}
+
+.footer__sns ul {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+
+    li {
+
+
+        a {
+            padding:0.5rem;
+            @include vars.transition;
+            
+            &:hover {
+                @include vars.hover-opacity;
+            }
+        }
+    
+    }
+
+    
+}

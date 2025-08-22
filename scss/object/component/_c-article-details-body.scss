@@ -1,0 +1,140 @@
+@use "../../foundation/variable" as vars;
+.c-article-details-body {
+    p {
+        margin-block: 1.7rem ;
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        @include vars.sp {
+            @include vars.text-style(1.6rem, calc(30/16));
+        }
+    }
+      
+    h2 {
+    margin-block: 3.3rem 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: calc(40 / 20);
+    
+    @include vars.sp {
+        line-height: calc(30 / 20);
+    }
+    }
+      
+    figure {
+    margin-block: 1.7rem;
+    
+    @include vars.sp {
+        margin-top: 3.9rem;
+    }
+    
+    img {
+        width: 33.5rem;
+        aspect-ratio: 335 / 200;
+        object-fit: cover;
+    
+        @include vars.sp {
+        width: 100%;
+        }
+    }
+    }
+      
+    ul,
+    ol {
+    margin-block: 2.8rem;
+    padding-left: 1em;
+    list-style: initial;
+    padding-left: 2rem;
+
+    }
+      
+    li {
+        @include vars.text-style(1.8rem, calc(30/18));
+        list-style: initial;
+        display: list-item;  
+        font-weight: 500;
+
+        @include vars.sp {
+            @include vars.text-style(1.6rem, calc(30/16));
+        }
+
+    }
+      
+    h3 {
+        margin-block: 4.3rem 1.7rem;
+        font-size: 2rem;
+        line-height: calc(40 / 20);
+        font-weight: bold;
+        padding-left: 1.1rem;
+        position: relative;
+        
+        @include vars.sp {
+            line-height: calc(30 / 20);
+            margin-bottom: 2rem;
+        }
+    
+        &::before {
+            content: "";
+            width: 0.3rem;
+            height: 2rem;
+            height: calc(100% - 2rem);
+            background: #000;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        
+            @include vars.sp {
+            height: calc(100% - 1rem);
+            }
+        }
+    }
+      
+    blockquote {
+        display: flex;
+        column-gap: 0.8rem;
+        padding: 1.8rem 3rem 1rem;
+        background: vars.$color-band;
+        margin-block: 1.7rem 2.9rem;
+        border: none;
+    
+        @include vars.sp {
+            column-gap: 1.7rem;
+            padding: 1.7rem 2rem 1.1rem 2.5rem;
+            margin-bottom: 2.6rem;
+        }
+        
+        &::before {
+            display: inline-block;
+            content: "";
+            width: 2.7rem;
+            height: 2.7rem;
+            background: url("../image/blog-details/logo-blog-details_callout.svg") no-repeat center/contain;
+            flex-shrink: 0; 
+        }
+        
+        p {
+            margin: 0;
+            flex: 1;
+        }
+    }
+      
+    a {
+        font-size: 2rem;
+        font-weight: bold;
+        color: vars.$color-main;
+        margin-block: 1.8rem;
+        text-decoration: underline;
+    }
+      
+    hr {
+        margin-block: 4.1rem;
+    
+        @include vars.sp {
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+.wp-block-separator {
+    border-bottom: 0.5px solid!important;
+}

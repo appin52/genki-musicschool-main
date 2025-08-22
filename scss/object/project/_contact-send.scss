@@ -1,0 +1,41 @@
+@use "../../foundation/variable" as vars;
+
+.contact-send-main {
+    padding-top: 6.8rem;
+    padding-bottom: 9rem;
+    @include vars.sp {
+        padding-top: 4.9rem;
+        padding-bottom: 4.9rem;
+    }
+
+    p {
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        text-align: center;
+        @include vars.sp {
+            @include vars.text-style(1.6rem, calc(30/16));
+            text-align: left;
+        }
+    }
+}
+
+// 送信ボタン
+.btn-contact-send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto 0rem;
+    width: 25rem;
+    height: 5rem;
+    @include vars.text-style(2.5rem, calc(33/25));
+    @include vars.transition;
+    @include vars.sp {
+        margin: 3.9rem auto 0;
+        width: 33.5rem;
+        height: 5rem;
+        @include vars.text-style(2rem, calc(36/20));
+    }
+    &:hover {
+        @include vars.hover-reversecolor;
+    }
+}

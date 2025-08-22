@@ -1,0 +1,70 @@
+@use "../../foundation/variable" as vars;
+
+
+// パンクズ
+
+
+.c-band {
+
+    background-color: vars.$color-band;
+    height: 5rem;
+    font-weight: 500;
+    @include vars.text-style(1.6rem, calc(33/16));
+    @include vars.sp {
+        height: 3.6rem;
+    }
+
+    .inner {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        @include vars.sp {
+            margin-right: 2rem;
+            line-height: 1.4;
+            overflow-x: auto;
+            /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+            -ms-overflow-style: none;
+            /*Firefoxへの対応*/
+            scrollbar-width: none;
+            /*Google Chrome、Safariへの対応*/
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+        & > span {
+            display: inline-flex;   // ← flex子そのものを箱に
+            min-width: max-content; // ← 文字幅で確実に計測
+            &:last-of-type {
+                @include vars.pc {
+                flex: 1;
+                overflow: hidden;
+                span {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                }
+                }
+            }
+        }
+    }
+    .current-item,
+    a {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: vars.$color-text;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        @include vars.sp {
+        height: 3.6rem;
+        white-space: nowrap;
+        }
+    }
+    .current-item {
+        height: initial;
+    }
+    &__sign {
+        display: block;
+        font-size: 1.6rem;
+    }
+}

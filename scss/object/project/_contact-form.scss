@@ -1,0 +1,301 @@
+@use "../../foundation/variable" as vars;
+
+.contact-form-main {
+    padding-top: 6.8rem;
+    padding-bottom: 8rem;
+    @include vars.sp {
+        padding-top: 4.7rem;
+        padding-bottom: 10.7rem;
+    }
+}
+
+.contact-form-text {
+    text-align: center;
+    @include vars.sp {
+        text-align: left;
+    }
+    p {
+        @include vars.text-style(1.8rem, calc(30/18));
+        font-weight: 500;
+        @include vars.sp {
+            @include vars.text-style(1.6rem, calc(30/16));
+        }
+    }
+}
+
+//構造の決定
+
+.contact-form-items {
+    margin-top: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    @include vars.sp {
+        margin-top: 1.5rem;
+        gap: 1.2rem;
+    }
+    
+}
+
+.form__items-flex {
+    display: flex;
+    align-items: center;
+    @include vars.sp {
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: flex-start;
+    }
+}
+
+.form__items-left {
+    width: 17rem;
+    @include vars.sp {
+        width: 100%;
+    }
+}
+
+.form__items-right {
+    flex: 1;
+    position: relative; 
+    // margin-bottom: 1.2rem; 
+    @include vars.sp {
+        width: 100%;
+    }
+}
+
+// 文字大きさ決定
+.form__items-company,
+.form__items-name,
+.form__items-email,
+.form__items-tel,
+.form__items-content {
+    label {
+        @include vars.text-style(2rem, calc(33/20));
+        font-weight: 500;
+        @include vars.sp {
+            @include vars.text-style(1.6rem, calc(30/16));
+        }
+    }
+    input{
+        @include vars.text-style(1.5rem, calc(33/15));
+        font-weight: 500;
+        padding: 0.3rem 2rem;
+    }
+}
+
+.form__items-question {
+    label {
+        @include vars.text-style(2rem, calc(30/20));
+        font-weight: 500;
+        @include vars.sp {
+            @include vars.text-style(1.6rem, calc(33/16));
+        }
+    }
+
+    @include vars.sp {
+        gap: 1rem;
+    }
+}   
+
+// 枠組み
+.form__items-company,
+.form__items-name,
+.form__items-email,
+.form__items-tel,
+.form__items-content {
+    .form__items-right {
+        border: 0.05rem solid vars.$color-text;
+        cursor: pointer;
+    
+        input {
+            width: 100%;
+        }
+    
+        
+    }
+}
+
+// 左微調整
+.form__items-left {
+    padding-top: 0.3rem;
+}
+
+
+// 質問の枠組み
+.form__items-question {
+    align-items: flex-start;
+
+    .form__items-right {
+        span {
+            @include vars.text-style(1.8rem, calc(30/18));
+            text-align: left;
+            font-weight: 500;
+            @include vars.sp {
+                @include vars.text-style(1.6rem, calc(30/16));
+            }
+        }
+    }
+
+    label {
+        @include vars.sp {
+            line-height: 1;
+        }
+    }
+}
+
+    // checkbox
+.form__items-checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: 2rem;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+    
+    .wpcf7-list-item-label {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 4rem;
+        @include vars.sp {
+            padding-left: 3rem;
+        }
+    }
+
+    .wpcf7-list-item-label::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2rem;
+        height: 2rem;
+        border: 0.05rem solid vars.$color-text;
+    }
+
+    input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
+        content: '\f00c';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0.3rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// CF7 の生成DOMに合わせて縦並びにする
+.form__items-checkbox .wpcf7-form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+// CF7 デフォルトの余白を打ち消し
+.form__items-checkbox .wpcf7-list-item {
+    margin: 0;
+}
+
+
+// 内容の枠組み
+.form__items-content {
+    align-items: flex-start;
+
+    .form__items-right {
+        textarea {
+            width: 100%;
+            min-height: 30rem;
+            resize: vertical;
+            @include vars.text-style(1.5rem, calc(33/15));
+            font-weight: 500;
+            padding: 1.3rem 2rem;
+            @include vars.sp {
+                min-height: 19rem;
+            }
+            
+            &::placeholder {
+                line-height: 1.7;
+          
+            }
+        }
+    }
+}
+
+
+// 送信ボタン
+.btn-contact-form {
+    margin: 1.8rem auto 0rem;
+    width: 25rem;
+    height: 5rem;
+    @include vars.text-style(2.5rem, calc(33/25));
+    @include vars.transition;
+    @include vars.sp {
+        margin: 3.8rem auto 0;
+        width: 33.5rem;
+        height: 5rem;
+        @include vars.text-style(2rem, calc(36/20));
+    }
+    &:hover {
+        @include vars.hover-reversecolor;
+    }
+}
+
+// ワードプレス用に調節
+
+.form__items-right .wpcf7-not-valid-tip {
+    position: absolute;
+    // top: calc(100% + 0.6rem);
+    left: 0;
+    margin: 0;
+    color: vars.$color-main;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+    color: vars.$color-main;
+    @include vars.sp {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+    color: vars.$color-main;
+    @include vars.sp {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+}
+
+.wpcf7-not-valid-tip {
+    font-size: 1.4rem !important;
+    line-height: 1.5 !important;
+    font-weight: 400 ;
+    @include vars.sp {
+        font-size: 1.2rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+.wpcf7-form-control-wrap{
+    textarea{
+        height: 10rem;
+    }
+}
