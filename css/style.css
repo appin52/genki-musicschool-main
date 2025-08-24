@@ -1611,6 +1611,13 @@ footer {
     height: 3.6rem;
   }
 }
+.c-band a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.c-band a:hover {
+  opacity: 0.5;
+}
 .c-band .inner {
   display: -webkit-box;
   display: -ms-flexbox;
