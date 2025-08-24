@@ -1618,53 +1618,6 @@ footer {
 .c-band a:hover {
   opacity: 0.5;
 }
-.c-band .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 2rem;
-     -moz-column-gap: 2rem;
-          column-gap: 2rem;
-}
-@media screen and (max-width: 767px) {
-  .c-band .inner {
-    margin-right: 2rem;
-    line-height: 1.4;
-    overflow-x: auto;
-    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
-    -ms-overflow-style: none;
-    /*Firefoxへの対応*/
-    scrollbar-width: none;
-    /*Google Chrome、Safariへの対応*/
-  }
-  .c-band .inner::-webkit-scrollbar {
-    display: none;
-  }
-}
-.c-band .inner > span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-@media screen and (min-width: 768px) {
-  .c-band .inner > span:last-of-type {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    overflow: hidden;
-  }
-  .c-band .inner > span:last-of-type span {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-  }
-}
 .c-band .current-item,
 .c-band a {
   font-size: 1.6rem;
@@ -1691,6 +1644,58 @@ footer {
 .c-band__sign {
   display: block;
   font-size: 1.6rem;
+}
+
+.c-band-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .c-band-text {
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 767px) {
+  .c-band-text {
+    line-height: 1.4;
+    overflow-x: auto;
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+    -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+    scrollbar-width: none;
+    /*Google Chrome、Safariへの対応*/
+  }
+  .c-band-text::-webkit-scrollbar {
+    display: none;
+  }
+}
+.c-band-text > span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+@media screen and (min-width: 768px) {
+  .c-band-text > span:last-of-type {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    overflow: hidden;
+  }
+  .c-band-text > span:last-of-type span {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
 }
 
 .top__first-view {
