@@ -129,6 +129,7 @@
         
         a {
             padding-inline: 1rem;
+            height: inherit; 
             display: flex;
             align-items: center;
             @include vars.transition;
@@ -136,23 +137,26 @@
             &:hover {
                 @include vars.hover-opacity;
             }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 30%;
+                left: 0;
+                width: 100%;
+                height: 0.2rem;
+                background-color: vars.$color-text;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+
         }
 
-        span {
-            display: block;
-            position: absolute;
-            bottom: 30%;
-            left: 0;
-            width: 100%;
-            height: 0.2rem;
-            background-color: vars.$color-text;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        &:hover span {
-            opacity: 1;
-        }
     }
 }
 
