@@ -83,24 +83,3 @@
     }
 }
 
-.reason__card__text-1 h3 {
-    margin-top: 0.7rem;
-    @include vars.sp {
-        margin-top: 3.2rem;
-    }
-}
-
-.reason__card__text-2 h3 {
-    margin-top: -0.3rem;
-    @include vars.sp {
-        margin-top: 3.2rem;
-    }
-}
-
-.reason__card__text-3 h3 {
-    margin-top: -0.5rem;
-    @include vars.sp {
-        margin-top: 3.2rem;
-    }
-}
-

@@ -67,7 +67,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/image/top/image_top_reason01_sp.jpeg" alt="きたむらミュージックスクール">
                             </picture>
                         </div>
-                        <div class="reason__card-text reason__card__text-1">
+                        <div class="reason__card-text">
                             <h3>技術面はプロによるマンツーマン授業！</h3>
                             <span></span>
                             <p>第一線で活躍するプロによるマンツーマン授業で、きめ細かな技術指導が受けられます。</p>
@@ -80,7 +80,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/image/top/image_top_reason02_sp.jpeg" alt="きたむらミュージックスクール">
                             </picture>
                         </div>
-                        <div class="reason__card-text reason__card__text-2">
+                        <div class="reason__card-text">
                             <h3>収益化するためのビジネスサポート！</h3>
                             <span></span>
                             <p>コンセプト設計や集客方法、マーケティングリサーチなど、音楽で稼ぎつづけるための方法やマインドセットをサポートするクラスをご用意。</p>
@@ -93,7 +93,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/image/top/image_top_reason03_sp.jpeg" alt="きたむらミュージックスクール">
                             </picture>
                         </div>
-                        <div class="reason__card-text reason__card__text-3">
+                        <div class="reason__card-text">
                             <h3>24時間365日使える練習ROOMを完備！</h3>
                             <span></span>
                             <p>一年中使える個室の練習ROOMを完備しているため、お仕事帰りや合間の時間も自由に練習が可能です。　（アプリで予約が必要です）</p>

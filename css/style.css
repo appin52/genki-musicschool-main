@@ -850,6 +850,7 @@ a {
 }
 .header__nav li a {
   padding-inline: 1rem;
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -862,7 +863,8 @@ a {
 .header__nav li a:hover {
   opacity: 0.5;
 }
-.header__nav li span {
+.header__nav li a::after {
+  content: "";
   display: block;
   position: absolute;
   bottom: 30%;
@@ -874,7 +876,7 @@ a {
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.header__nav li:hover span {
+.header__nav li a:hover::after {
   opacity: 1;
 }
 
@@ -1611,52 +1613,12 @@ footer {
     height: 3.6rem;
   }
 }
-.c-band .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 2rem;
-     -moz-column-gap: 2rem;
-          column-gap: 2rem;
+.c-band a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 767px) {
-  .c-band .inner {
-    margin-right: 2rem;
-    line-height: 1.4;
-    overflow-x: auto;
-    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
-    -ms-overflow-style: none;
-    /*Firefoxへの対応*/
-    scrollbar-width: none;
-    /*Google Chrome、Safariへの対応*/
-  }
-  .c-band .inner::-webkit-scrollbar {
-    display: none;
-  }
-}
-.c-band .inner > span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-@media screen and (min-width: 768px) {
-  .c-band .inner > span:last-of-type {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    overflow: hidden;
-  }
-  .c-band .inner > span:last-of-type span {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-  }
+.c-band a:hover {
+  opacity: 0.5;
 }
 .c-band .current-item,
 .c-band a {
@@ -1684,6 +1646,58 @@ footer {
 .c-band__sign {
   display: block;
   font-size: 1.6rem;
+}
+
+.c-band-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .c-band-text {
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 767px) {
+  .c-band-text {
+    line-height: 1.4;
+    overflow-x: auto;
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+    -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+    scrollbar-width: none;
+    /*Google Chrome、Safariへの対応*/
+  }
+  .c-band-text::-webkit-scrollbar {
+    display: none;
+  }
+}
+.c-band-text > span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+@media screen and (min-width: 768px) {
+  .c-band-text > span:last-of-type {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    overflow: hidden;
+  }
+  .c-band-text > span:last-of-type span {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
 }
 
 .top__first-view {
@@ -2015,33 +2029,6 @@ footer {
     line-height: 1.875;
     padding-left: 0;
     margin-top: 1.7rem;
-  }
-}
-
-.reason__card__text-1 h3 {
-  margin-top: 0.7rem;
-}
-@media screen and (max-width: 767px) {
-  .reason__card__text-1 h3 {
-    margin-top: 3.2rem;
-  }
-}
-
-.reason__card__text-2 h3 {
-  margin-top: -0.3rem;
-}
-@media screen and (max-width: 767px) {
-  .reason__card__text-2 h3 {
-    margin-top: 3.2rem;
-  }
-}
-
-.reason__card__text-3 h3 {
-  margin-top: -0.5rem;
-}
-@media screen and (max-width: 767px) {
-  .reason__card__text-3 h3 {
-    margin-top: 3.2rem;
   }
 }
 
