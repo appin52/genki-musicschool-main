@@ -30,12 +30,6 @@
 
 .question__card-q,
 .question__card-a {
-    padding: 1.75rem 5rem 1.75rem 6.5rem;
-    position: relative;
-    @include vars.sp {
-        padding: 1.3rem 4.5rem 1.3rem 5.5rem;
-    }
-
     p {
         @include vars.text-style(1.7rem, calc(30/17));
         font-weight: 500;
@@ -47,12 +41,28 @@
 
 .question__card-q {
     cursor: pointer;
+    position: relative;
+    padding: 1.75rem 5rem 1.75rem 6.5rem;
+    @include vars.sp {
+        padding: 1.3rem 4.5rem 1.3rem 5.5rem;
+    }
 }
 
 .question__card-a {
     background-color:rgba(203, 0, 0, 0.1);
-    display: none;
     cursor: pointer;
+    display: none;
+}
+
+.question__card-a-flex {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 1.75rem 5rem 1.75rem 6.5rem;
+    @include vars.sp {
+        padding: 1.3rem 4.5rem 1.3rem 5.5rem;
+    }
+
 }
 
 .question__q-icon__box,
@@ -65,6 +75,10 @@
         left: 1rem;
     }
 }
+
+// .question__card-a.is-open {
+//     display: block;
+// }
 
 .question__arrow {
     width: 1.3rem;

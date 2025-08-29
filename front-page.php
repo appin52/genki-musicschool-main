@@ -191,10 +191,12 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/image/top/logo_top_question.arrow.svg" alt="矢印" class="question__arrow">
                         </div>
                         <div class="question__card-a js-question-trigger">
-                            <div class="question__a-icon__box">
-                                <span class="question__a-icon">A</span>
+                            <div class="question__card-a-flex">
+                                <div class="question__a-icon__box">
+                                    <span class="question__a-icon">A</span>
+                                </div>
+                                <p class="question__card-text c-font-red">回答のテキストが入ります。回答のテキストが入ります。回答のテキストが入ります。</p>
                             </div>
-                            <p class="question__card-text c-font-red">回答のテキストが入ります。回答のテキストが入ります。回答のテキストが入ります。</p>
                         </div>
                     </div>
                     <div class="question__box-item question__card">
@@ -206,10 +208,12 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/image/top/logo_top_question.arrow.svg" alt="矢印" class="question__arrow">
                         </div>
                         <div class="question__card-a js-question-trigger">
-                            <div class="question__a-icon__box">
-                                <span class="question__a-icon">A</span>
+                            <div class="question__card-a-flex">
+                                <div class="question__a-icon__box">
+                                    <span class="question__a-icon">A</span>
+                                </div>
+                                <p class="question__card-text c-font-red">途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
                             </div>
-                            <p class="question__card-text c-font-red">途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
                         </div>
                     </div>
                     <div class="question__box-item question__card">
@@ -221,10 +225,12 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/image/top/logo_top_question.arrow.svg" alt="矢印" class="question__arrow">
                         </div>
                         <div class="question__card-a js-question-trigger">
-                            <div class="question__a-icon__box">
-                                <span class="question__a-icon">A</span>
+                            <div class="question__card-a-flex">
+                                <div class="question__a-icon__box">
+                                    <span class="question__a-icon">A</span>
+                                </div>
+                                <p class="question__card-text c-font-red">回答のテキストが入ります。回答のテキストが入ります。回答のテキストが入ります。</p>
                             </div>
-                            <p class="question__card-text c-font-red">回答のテキストが入ります。回答のテキストが入ります。回答のテキストが入ります。</p>
                         </div>
                     </div>
                     <div class="question__box-item question__card">
@@ -236,10 +242,12 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/image/top/logo_top_question.arrow.svg" alt="矢印" class="question__arrow">
                         </div>
                         <div class="question__card-a js-question-trigger">
-                            <div class="question__a-icon__box">
-                                <span class="question__a-icon">A</span>
+                            <div class="question__card-a-flex">
+                                <div class="question__a-icon__box">
+                                    <span class="question__a-icon">A</span>
+                                </div>
+                                <p class="question__card-text c-font-red">回答のテキストが入ります。回答のテキストが入ります。回答のテキストが入ります。</p>
                             </div>
-                            <p class="question__card-text c-font-red">回答のテキストが入ります。回答のテキストが入ります。回答のテキストが入ります。</p>
                         </div>
                     </div>
                 </div>

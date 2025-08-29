@@ -77,7 +77,7 @@ $(".js-question-trigger").click(function(){
   
     if ($item.hasClass("is-open")) {
         $answer
-          .css("display", "flex")
+          .css("display", "block")
           .hide()
           .slideDown(300);
     } else {
