@@ -2032,33 +2032,6 @@ footer {
   }
 }
 
-.reason__card__text-1 h3 {
-  margin-top: 0.7rem;
-}
-@media screen and (max-width: 767px) {
-  .reason__card__text-1 h3 {
-    margin-top: 3.2rem;
-  }
-}
-
-.reason__card__text-2 h3 {
-  margin-top: -0.3rem;
-}
-@media screen and (max-width: 767px) {
-  .reason__card__text-2 h3 {
-    margin-top: 3.2rem;
-  }
-}
-
-.reason__card__text-3 h3 {
-  margin-top: -0.5rem;
-}
-@media screen and (max-width: 767px) {
-  .reason__card__text-3 h3 {
-    margin-top: 3.2rem;
-  }
-}
-
 .top__voice {
   padding: 4.4rem 0 8rem;
 }
