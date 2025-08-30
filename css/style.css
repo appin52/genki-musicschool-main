@@ -1489,6 +1489,11 @@ footer {
   color: #CB0000;
   margin-block: 1.8rem;
   text-decoration: underline;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.c-article-details-body a:hover {
+  opacity: 0.5;
 }
 .c-article-details-body hr {
   margin-block: 4.1rem;
@@ -3353,6 +3358,14 @@ footer {
 
 .wpcf7-form-control-wrap textarea {
   height: 10rem;
+}
+
+.wpcf7-form-control-wrap > .wpcf7-not-valid-tip {
+  display: none;
+}
+
+.wpcf7 form.invalid .wpcf7-form-control-wrap.is-show > .wpcf7-not-valid-tip {
+  display: block;
 }
 
 .contact-send-main {
