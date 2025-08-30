@@ -15,7 +15,7 @@ $next_post = get_next_post();
                 <?php if (has_post_thumbnail($prev_post->ID)) : ?>
                     <?php echo get_the_post_thumbnail($prev_post->ID, 'large'); ?>
                 <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/image/common/no-image.png" alt="No image">
                 <?php endif; ?>
             </div>
             <div class="before-after__item-text">
@@ -40,7 +40,7 @@ $next_post = get_next_post();
                 <?php if (has_post_thumbnail($next_post->ID)) : ?>
                     <?php echo get_the_post_thumbnail($next_post->ID, 'large'); ?>
                 <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/image/common/no-image.png" alt="No image">
                 <?php endif; ?>
             </div>
             <div class="before-after__item-text">

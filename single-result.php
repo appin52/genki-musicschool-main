@@ -18,7 +18,7 @@
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail('large'); ?>
                             <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                <img src="<?php echo get_template_directory_uri(); ?>/image/common/no-image.png" alt="No image">
                             <?php endif; ?>
                         </div>
                         <span class="c-category__result-details-main c-category">

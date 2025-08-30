@@ -299,3 +299,14 @@
         height: 10rem;
     }
 }
+
+.wpcf7-form-control-wrap {
+    > .wpcf7-not-valid-tip {
+      display: none;
+    }
+  }
+
+// 送信後に無効だった場合のみ .is-show を付与して表示（JSで付与）
+.wpcf7 form.invalid .wpcf7-form-control-wrap.is-show > .wpcf7-not-valid-tip {
+  display: block;
+}

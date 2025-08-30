@@ -77,7 +77,7 @@ $(".js-question-trigger").click(function(){
   
     if ($item.hasClass("is-open")) {
         $answer
-          .css("display", "flex")
+          .css("display", "block")
           .hide()
           .slideDown(300);
     } else {
@@ -310,6 +310,14 @@ $(document).ready(function() {
 
 $(".voice-slider").slick('setPosition');
 $(window).trigger('resize');
+
+
+// ==========================================================================
+// Contact Form 7: 送信後に無効(エラー)だった時だけメッセージを表示
+// ==========================================================================
+document.addEventListener('wpcf7invalid', function (event) {
+  jQuery(event.target).find('.wpcf7-form-control-wrap').addClass('is-show');
+}, false);
 
 
 

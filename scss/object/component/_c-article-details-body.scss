@@ -124,6 +124,10 @@
         color: vars.$color-main;
         margin-block: 1.8rem;
         text-decoration: underline;
+        @include vars.transition;
+        &:hover {
+            @include vars.hover-opacity;
+        }
     }
       
     hr {

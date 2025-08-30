@@ -1489,6 +1489,11 @@ footer {
   color: #CB0000;
   margin-block: 1.8rem;
   text-decoration: underline;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.c-article-details-body a:hover {
+  opacity: 0.5;
 }
 .c-article-details-body hr {
   margin-block: 4.1rem;
@@ -2354,17 +2359,6 @@ footer {
   border-bottom: 0.5px solid #000000;
 }
 
-.question__card-q,
-.question__card-a {
-  padding: 1.75rem 5rem 1.75rem 6.5rem;
-  position: relative;
-}
-@media screen and (max-width: 767px) {
-  .question__card-q,
-  .question__card-a {
-    padding: 1.3rem 4.5rem 1.3rem 5.5rem;
-  }
-}
 .question__card-q p,
 .question__card-a p {
   font-size: 1.7rem;
@@ -2381,12 +2375,35 @@ footer {
 
 .question__card-q {
   cursor: pointer;
+  position: relative;
+  padding: 1.75rem 5rem 1.75rem 6.5rem;
+}
+@media screen and (max-width: 767px) {
+  .question__card-q {
+    padding: 1.3rem 4.5rem 1.3rem 5.5rem;
+  }
 }
 
 .question__card-a {
   background-color: rgba(203, 0, 0, 0.1);
-  display: none;
   cursor: pointer;
+  display: none;
+}
+
+.question__card-a-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  padding: 1.75rem 5rem 1.75rem 6.5rem;
+}
+@media screen and (max-width: 767px) {
+  .question__card-a-flex {
+    padding: 1.3rem 4.5rem 1.3rem 5.5rem;
+  }
 }
 
 .question__q-icon__box,
@@ -3341,6 +3358,14 @@ footer {
 
 .wpcf7-form-control-wrap textarea {
   height: 10rem;
+}
+
+.wpcf7-form-control-wrap > .wpcf7-not-valid-tip {
+  display: none;
+}
+
+.wpcf7 form.invalid .wpcf7-form-control-wrap.is-show > .wpcf7-not-valid-tip {
+  display: block;
 }
 
 .contact-send-main {
