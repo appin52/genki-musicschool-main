@@ -103,7 +103,7 @@
 		<div id="container">
 			<header class="header">
                 <div class="header-content">
-                    <?php if ( is_front_page() || is_search() ) : ?>
+                    <?php if ( is_front_page()) : ?>
                         <h1 class="header__title">
                     <?php else : ?>
                         <div class="header__title">
@@ -111,7 +111,7 @@
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header__title-link">
                             きたむら<br class="sp_none"><span>ミュージックスクール</span>
                         </a>
-                    <?php if ( is_front_page() || is_search() ) : ?>
+                    <?php if ( is_front_page()) : ?>
                         </h1>
                     <?php else : ?>
                         </div>
