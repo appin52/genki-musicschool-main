@@ -4195,6 +4195,10 @@ footer {
   }
 }
 
+.search__main-no-result-items {
+  margin-top: 4.3rem;
+}
+
 .search__items-card {
   display: -webkit-box;
   display: -ms-flexbox;
