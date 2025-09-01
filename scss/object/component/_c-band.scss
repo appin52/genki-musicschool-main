@@ -68,11 +68,13 @@
         &:last-of-type {
             @include vars.pc {
                 flex: 1;
+                min-width: 0;
                 overflow: hidden;
                 span {
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 1;
+                    display: block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
         }

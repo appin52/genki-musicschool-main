@@ -1696,12 +1696,14 @@ footer {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    min-width: 0;
     overflow: hidden;
   }
   .c-band-text > span:last-of-type span {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
