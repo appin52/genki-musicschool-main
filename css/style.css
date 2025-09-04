@@ -3347,13 +3347,13 @@ footer {
 }
 
 .wpcf7-not-valid-tip {
-  font-size: 1.4rem !important;
+  font-size: 1.2rem !important;
   line-height: 1.5 !important;
   font-weight: 400;
 }
 @media screen and (max-width: 767px) {
   .wpcf7-not-valid-tip {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     line-height: 1.5 !important;
   }
 }

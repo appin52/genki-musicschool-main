@@ -45,7 +45,7 @@
                                     ?>
                                 </span>
                                 <div class="search__card-text">
-                                    <h3><?php echo wp_trim_words(get_the_title(), 26, '...'); ?></h3>
+                                    <h2><?php echo wp_trim_words(get_the_title(), 26, '...'); ?></h2>
                                     <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                                     <p><?php echo wp_trim_words(get_the_content(), 120, '...'); ?></p>
                                 </div>
