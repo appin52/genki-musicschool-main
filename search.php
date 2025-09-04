@@ -45,7 +45,7 @@
                                     ?>
                                 </span>
                                 <div class="search__card-text">
-                                    <h3><?php echo wp_trim_words(get_the_title(), 26, '...'); ?></h3>
+                                    <h2><?php echo wp_trim_words(get_the_title(), 26, '...'); ?></h2>
                                     <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                                     <p><?php echo wp_trim_words(get_the_content(), 120, '...'); ?></p>
                                 </div>
@@ -64,14 +64,30 @@
 
                     <?php else : ?>
                         <div class="search__main-no-result">
-                            <p>検索されたキーワードにマッチする<br class="pc_none">記事はありません</p>
+                            <div class="search__main-text">
+                                <div class="search__main-left-text">
+                                    <h1>検索結果</h1>
+                                </div>
+                                <div class="search__main-right-text">
+                                    <p>0件</p>
+                                </div>
+                            </div>
+                            <p class="search__main-no-result-items">検索されたキーワードにマッチする<br class="pc_none">記事はありません</p>
                             <a onclick="history.back()" class="c-btn btn-contact-send c-text-center">戻る</a>
                         </div>
                     <?php endif; ?>
 
                 <?php else : ?>
                     <div class="search__main-no-result">
-                        <p>検索ワードが未入力です</p>
+                        <div class="search__main-text">
+                            <div class="search__main-left-text">
+                                <h1>検索結果</h1>
+                            </div>
+                            <div class="search__main-right-text">
+                                <p>0件</p>
+                            </div>
+                        </div>
+                        <p class="search__main-no-result-items">検索ワードが未入力です</p>
                         <a onclick="history.back()" class="c-btn btn-contact-send c-text-center">戻る</a>
                     </div>
                 <?php endif; ?>

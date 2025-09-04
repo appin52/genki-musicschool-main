@@ -105,3 +105,21 @@ function register_my_menus()
   ));
 }
 add_action('after_setup_theme', 'register_my_menus');
+
+// --------------------------------------------------
+//reCAPTCHA 読み込み制限
+// --------------------------------------------------
+function my_recaptcha_limiter() {
+  if ( is_page('contact') ) {
+      // お問い合わせページだけ reCAPTCHA を読み込む
+      if ( function_exists('wpcf7_enqueue_scripts') ) {
+          wpcf7_enqueue_scripts();
+          wpcf7_enqueue_styles();
+      }
+  } else {
+      // 他ページでは読み込まない
+      wp_dequeue_script('google-recaptcha');
+      wp_dequeue_script('wpcf7-recaptcha');
+  }
+}
+add_action('wp_enqueue_scripts', 'my_recaptcha_limiter', 100);

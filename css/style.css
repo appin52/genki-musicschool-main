@@ -1696,12 +1696,14 @@ footer {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    min-width: 0;
     overflow: hidden;
   }
   .c-band-text > span:last-of-type span {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -3345,13 +3347,13 @@ footer {
 }
 
 .wpcf7-not-valid-tip {
-  font-size: 1.4rem !important;
+  font-size: 1.2rem !important;
   line-height: 1.5 !important;
   font-weight: 400;
 }
 @media screen and (max-width: 767px) {
   .wpcf7-not-valid-tip {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     line-height: 1.5 !important;
   }
 }
@@ -4191,6 +4193,10 @@ footer {
   .search__main-items {
     gap: 4rem;
   }
+}
+
+.search__main-no-result-items {
+  margin-top: 4.3rem;
 }
 
 .search__items-card {

@@ -36,6 +36,11 @@
             </div>
         </div>
         <?php get_template_part( 'template-parts/fix-area' ); ?>
+        <script>
+        document.addEventListener('wpcf7mailsent', function () {
+        window.location.href = "<?php echo esc_url( home_url('/contact-send/') ); ?>";
+        }, false);
+        </script>
     </main>
     
 <?php get_footer(); ?>
