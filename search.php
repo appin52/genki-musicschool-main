@@ -64,7 +64,15 @@
 
                     <?php else : ?>
                         <div class="search__main-no-result">
-                            <p>検索されたキーワードにマッチする<br class="pc_none">記事はありません</p>
+                            <div class="search__main-text">
+                                <div class="search__main-left-text">
+                                    <h1>検索結果</h1>
+                                </div>
+                                <div class="search__main-right-text">
+                                    <p>0件</p>
+                                </div>
+                            </div>
+                            <p class="search__main-no-result-items">検索されたキーワードにマッチする<br class="pc_none">記事はありません</p>
                             <a onclick="history.back()" class="c-btn btn-contact-send c-text-center">戻る</a>
                         </div>
                     <?php endif; ?>
