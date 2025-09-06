@@ -7,6 +7,7 @@
 
 .c-btn {
     border: 0.1rem solid vars.$color-main;
+    border-bottom: none;
     color: vars.$color-white;
     background-color: vars.$color-main;
     @include vars.transition;

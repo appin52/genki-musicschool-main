@@ -88,7 +88,7 @@
     @include vars.sp {
         width: 100%;
     }
-    h3 {
+    h2 {
         @include vars.text-style(2rem, calc(25/20));
         margin-top: -0.1rem;
         @include vars.sp {
@@ -146,5 +146,9 @@
     p {
         @include vars.text-style(2rem, calc(30/20));
         font-weight: 500;
+    }
+
+    a {
+        cursor: pointer;
     }
 }

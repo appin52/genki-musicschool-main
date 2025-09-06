@@ -1172,6 +1172,7 @@ footer {
 
 .c-btn {
   border: 0.1rem solid #CB0000;
+  border-bottom: none;
   color: #ffffff;
   background-color: #CB0000;
   -webkit-transition: all 0.3s ease;
@@ -4255,13 +4256,13 @@ footer {
     width: 100%;
   }
 }
-.search__card-text h3 {
+.search__card-text h2 {
   font-size: 2rem;
   line-height: 1.25;
   margin-top: -0.1rem;
 }
 @media screen and (max-width: 767px) {
-  .search__card-text h3 {
+  .search__card-text h2 {
     font-size: 2rem;
     line-height: 1.5;
     margin-top: 3rem;
@@ -4324,6 +4325,9 @@ footer {
   font-size: 2rem;
   line-height: 1.5;
   font-weight: 500;
+}
+.search__main-no-result a {
+  cursor: pointer;
 }
 
 .not-found__main {
