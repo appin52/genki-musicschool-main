@@ -1172,6 +1172,7 @@ footer {
 
 .c-btn {
   border: 0.1rem solid #CB0000;
+  border-bottom: none;
   color: #ffffff;
   background-color: #CB0000;
   -webkit-transition: all 0.3s ease;
